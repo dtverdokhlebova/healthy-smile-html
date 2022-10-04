@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7742add4-5d3c-4060-9f01-67963d12fb4e&amp;lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="inner">
+          <div class="header__top">
+            <div class="header__logo"><img src="data:image/png;base64,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" alt=""></div>
+            <div class="header__info">
+              <div class="header__item header__item--addr">
+                <div class="header__item-icon"><img src="img/header_icon_addr.svg" alt=""></div>
+                <div class="header__item-main">
+                  <div class="header__item-title">Наш адрес:</div>
+                  <div class="header__item-descr">г.Москва ул. Новаторов, д.4  <br>Метро Новаторская</div>
+                </div>
+              </div>
+              <div class="header__item">
+                <div class="header__item-icon"><img src="img/header_icon_time.svg" alt=""></div>
+                <div class="header__item-main">
+                  <div class="header__item-title">Часы работы:</div>
+                  <div class="header__item-descr">с 9:00 до 21:00</div>
+                </div>
+              </div>
+            </div>
+            <div class="header__contacts">
+              <div class="header__phone">
+                <div class="header__phone-text">Телефон для связи:</div><a class="header__phone-num" href="tel:+74951265490">+7 (495) 126-54-90</a>
+              </div><a class="ui-button header__ui-button" href="#">Записаться на прием</a>
+            </div>
+            <div class="header__burger-btn"><span></span></div>
+          </div>
+          <div class="header__bottom">
+            <ul class="header__menu">
+              <li class="header__menu-item"><a class="header__menu-link js-anchor header__menu-link--active" href="#banner">Главная</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#services">Наши услуги</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#about">О компании</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#reviews">Отзывы</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#specialists">Врачи</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#service-cost">Стоимость услуг</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#licensed">Сертификаты</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#rating">Наш рейтинг</a></li>
+              <li class="header__menu-item"><a class="header__menu-link js-anchor" href="#contacts">Контакты</a></li>
+            </ul>
+            <div class="header__m-contacts">
+              <div class="header__m-addr">
+                <div class="header__m-title">Наш адрес:</div>
+                <div class="header__m-descr">г.Москва ул. Новаторов, д.4 <br>Метро Новаторская</div>
+              </div><a class="ui-button" href="#">Записаться на прием</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__overlay"></div>
+      </header>
+      <main class="main">
+        <section class="section" id="banner">
+          <div class="banner">
+            <div class="inner">
+              <div class="banner__wrapper">
+                <h1 class="banner__title">Как качественно и&nbsp;безболезненно <span class="banner__attention">вылечить зубы рядом с&nbsp;домом с&nbsp;экономией 20% и&nbsp;больше</span>
+                </h1>
+                <div class="banner__img"><img src="img/banner_img.png" alt=""/></div>
+                <div class="banner__foot">
+                  <div class="banner__descr">Хотите бесплатно получить комплексный план лечения?</div><a class="ui-button banner__ui-button ui-button--flare" href="#">Конечно хочу!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--ov-hidden" id="services">
+          <div class="services">
+            <div class="inner">
+              <h2 class="ui-h2 services__ui-h2 text-center text-center--mob-left">Наши услуги
+              </h2>
+              <div class="services__wrapper">
+                <div class="services__item">
+                  <div class="services__content">
+                    <div class="services__title">Протезирование зубов</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Cобственная цифровая Cad/Cam лаборатория</li>
+                        <li>Изготовление керамических коронок за 1 час</li>
+                        <li>Квалифицированные ортопеды и ортодонты</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_1.png" alt=""/></div>
+                </div>
+                <div class="services__item">
+                  <div class="services__content">
+                    <div class="services__title">Имплантация</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Большой выбор имплантологических систем</li>
+                        <li>Применение Cad/Cam хирургического шаблона</li>
+                        <li>Доступные цены и квалифицированные врачи</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_2.png" alt=""/></div>
+                </div>
+                <div class="services__item">
+                  <div class="services__content">
+                    <div class="services__title">Комплексная имплантация</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Имплантация на 2-х,4-х и 6-ти имплантах</li>
+                        <li>Применение Cad/Cam хирургического шаблона</li>
+                        <li>Протезирование от эконома до эксклюзива</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_3.png" alt=""/></div>
+                </div>
+                <div class="services__item">
+                  <div class="services__content">
+                    <div class="services__title">Лечение зубов</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Лечение зубов с применением диодного лазера</li>
+                        <li>лечение зубов с применением микроскопа</li>
+                        <li>керамические реставрации</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_4.png" alt=""/></div>
+                </div>
+                <div class="services__item">
+                  <div class="services__content">
+                    <div class="services__title">Пародонтология</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Аппаратная пародонтология (Vector, FotoSan, лазер)</li>
+                        <li>Консервативная терапевтическая пародонтология</li>
+                        <li>Традиционное хирургическое лечение десен</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_5.png" alt=""/></div>
+                </div>
+                <div class="services__item services__item--mob-hidden">
+                  <div class="services__content">
+                    <div class="services__title">Хирургическая стоматология</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Эффективные и безопасные анестетики</li>
+                        <li>Ультразвуковое хирургическое оборудование</li>
+                        <li>Применение стоматологического лазера</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_6.png" alt=""/></div>
+                </div>
+                <div class="services__item services__item--mob-hidden">
+                  <div class="services__content">
+                    <div class="services__title">Детская стоматология</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Индивидуальный подход к каждому ребенку</li>
+                        <li>Лечение под закисью азота</li>
+                        <li>Лечение под наркозом</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_7.png" alt=""/></div>
+                </div>
+                <div class="services__item services__item--mob-hidden">
+                  <div class="services__content">
+                    <div class="services__title">Отбеливание зубов</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Эффективное отбеливание системой ZOOM 4</li>
+                        <li>Щадящее отбеливание</li>
+                        <li>Домашнее отбеливание на каппах</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_8.png" alt=""/></div>
+                </div>
+                <div class="services__item services__item--mob-hidden">
+                  <div class="services__content">
+                    <div class="services__title">Ортодонтия</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Большой выбор современных брекет-систем</li>
+                        <li>Выравнивание зубов на элайнерах</li>
+                        <li>Прозрачная система расчета лечения</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_9.png" alt=""/></div>
+                </div>
+                <div class="services__item services__item--mob-hidden">
+                  <div class="services__content">
+                    <div class="services__title">Диагностика</div>
+                    <div class="services__descr">
+                      <ul class="services__list">
+                        <li>Компьютерный томограф</li>
+                      </ul>
+                    </div><a class="ui-button services__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="services__img"><img src="img/services_img_10.png" alt=""/></div>
+                </div>
+              </div>
+              <div class="services__more">
+                <button class="ui-button ui-button--empty">Показать все услуги
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="about">
+          <div class="about">
+            <div class="about__decor"><img src="img/about_decor.png" alt=""/></div>
+            <div class="inner">
+              <div class="about__wrapper">
+                <div class="about__img"><img src="img/about_img.png" alt=""/></div>
+                <div class="about__content">
+                  <h2 class="ui-h2 ui-h2--mb-section">О нас:
+                  </h2>
+                  <div class="about__text">
+                    <div class="about__title">
+                      <div class="about__attention">«Здоровая Улыбка» на&nbsp;Новаторов</div>один из современных стоматологических центров в&nbsp;Москве.
+                    </div>
+                    <div class="about__descr">
+                      <p>Оказываем качественные медицинские услуги для взрослых и детей по доступным ценам. В любой нашей клинике команда квалифицированных и заботливых врачей гарантирует вам надежное, комфортное и безопасное лечение, а также здоровую  и&nbsp;красивую улыбку!</p>
+                      <p>В центре врачи используют только лучшие и проверенные временем сертифицированные стоматологические материалы ведущих производителей. Клиника оснащена современным оборудованием премиум-класса из Германии и&nbsp;Италии, включая цифровую компьютерную томографию, микроскоп Carl Zeiss, блок стерилизации и удобные кресла-установки последнего поколения.</p>
+                    </div>
+                  </div>
+                  <div class="about__slider">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_1.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_2.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_3.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_4.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_5.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_6.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_7.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_8.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_9.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_10.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_11.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_12.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_13.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_14.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_15.webp" alt=""/></div>
+                        <div class="swiper-slide" data-src="#about-popup" onclick="window.getPopup($(this))"><img src="img/about_slider_16.webp" alt=""/></div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev ui-swiper-button"></div>
+                    <div class="swiper-button-next ui-swiper-button"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="reviews">
+          <div class="reviews">
+            <div class="inner">
+              <h2 class="ui-h2 ui-h2--mb-section text-center">Что говорят о&nbsp;нас пациенты
+              </h2>
+              <div class="reviews__slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="reviews__item swiper-slide">
+                      <div class="reviews__head">
+                        <div class="reviews__date">6.09.2022</div>
+                        <div class="reviews__rating" data-rating="3.5">
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                        </div>
+                      </div>
+                      <div class="reviews__text">Первый раз обратилась в эту клинику экстренно для записи ребёнка, первое что подкупить это то, что позвонила в 9 вечера, а утром уже была на приёме. Сейчас с декабря посещаем ортодонта Гатагонову Фатиму Руслановну. Изготовили пластинку для исправления прикуса ребёнку  и следим что бы зубки были красивые и ровненькие. Если у меня возникают какие-то вопросы на приеме, Фатима Руслановна всегда подробно и наглядно показывает и рассказывает. Врач сразу нашёл общий язык с ребёнком, и он не боится походов к ней! Отличный врач, буду рекомендовать близким</div>
+                    </div>
+                    <div class="reviews__item swiper-slide">
+                      <div class="reviews__head">
+                        <div class="reviews__date">14.09.2022</div>
+                        <div class="reviews__rating" data-rating="3.5">
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                        </div>
+                      </div>
+                      <div class="reviews__text">Мне все понравилось. Я обратилась в стоматологию "Здоровая улыбка" в первый раз, нашла через портал "ПроДокторов". Врач провела осмотр и консультацию. Врач составила план лечения, к тому же, в кабинет подошли и другие врачи: и хирурги, и имплантологи, в общем-то, все назвали свою работу и цены. В плане интерьера в стоматологии все хорошо оборудование современное. Клиника сама по себе чистая и аккуратная, все в этом плане в порядке. Администраторы хорошо меня встретили, к кабинету проводили, ждать не пришлось, все вовремя. Территориально клиника удобно для меня расположена, с поиском проблем не возникло, вывеска опознавательная там есть.</div>
+                    </div>
+                    <div class="reviews__item swiper-slide">
+                      <div class="reviews__head">
+                        <div class="reviews__date">11.07.2022</div>
+                        <div class="reviews__rating" data-rating="3.5">
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                        </div>
+                      </div>
+                      <div class="reviews__text">Понравился человеческий подход и профессионализм. Спасибо всему персоналу. Удобное расположение рядом с метро. Рекомендую.</div>
+                    </div>
+                    <div class="reviews__item swiper-slide">
+                      <div class="reviews__head">
+                        <div class="reviews__date">5.07.2022</div>
+                        <div class="reviews__rating" data-rating="3.5">
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                          <div class="reviews__star"></div>
+                        </div>
+                      </div>
+                      <div class="reviews__text">Спасибо клинике «Здоровая улыбка» и всей ее команде. Отдельно выражаю огромную благодарность хирургу Мелян Владимиру Рачиковичу. Нахожусь под впечатлением как от качества его работы, так и от профессионального подхода к общению с клиентами. Он внимательный, руки золотые. Мое лечение прошло быстро и совершенно не больно. Очень довольна работой и ему можно доверять. Готова рекомендовать клинику друзьям и знакомым.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev ui-swiper-button"></div>
+                <div class="swiper-button-next ui-swiper-button"></div>
+                <div class="ui-swiper-pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--ov-hidden" id="specialists">
+          <div class="specialists">
+            <div class="inner">
+              <h2 class="ui-h2 ui-h2--mb-section text-center">Наши специалисты
+              </h2>
+              <div class="specialists__slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_1.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Колодезникова</div>Наталья Андреевна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_2.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Битиев</div>Алан Вадимович
+                        </div>
+                        <div class="specialists__descr">Более 10&nbsp;лет работы в&nbsp;ведущих стоматологиях&nbsp;РФ. Специализируется на&nbsp;лечении кариеса.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_3.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Гасанова</div>Заира Романовна
+                        </div>
+                        <div class="specialists__descr">Диплом с&nbsp;отличием. Специализируется на&nbsp;лечении пациентов с&nbsp;заболеваниями височно-нижнечелюстного сустава.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_4.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Эльдаров</div>Муслим Камилович
+                        </div>
+                        <div class="specialists__descr">Получил образование в&nbsp;России и за&nbsp;рубежом. Более 15&nbsp;курсов повышения квалификации</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_5.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Мирзоев</div>Фарзон Мирославович
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_6.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Вагабов</div>Гаджи Исмаилович
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_7.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Григорян</div>Анна Галустовна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_8.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Ломакина</div>Анастасия Андреевна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_9.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Гатагонова</div>Фатима Руслановна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_10.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Белокоскова</div>Юлия Владимировна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов.</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_11.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Кудрякова</div>Динара Фяритовна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов..</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_12.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Дорогова</div>Екатерина Сергеевна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов..</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_13.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Ананич</div>Наталья Георгиевна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов..</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_14.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Григорян</div>Наринэ Андраниковна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов..</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_15.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Абакарова</div>Аида Рамазановна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов..</div>
+                      </div>
+                    </div>
+                    <div class="specialists__item swiper-slide">
+                      <div class="specialists__photo"><img src="img/specialists__photo_16.png" alt=""/></div>
+                      <div class="specialists__text">
+                        <div class="specialists__name">
+                          <div>Осипова</div>Маргарита Эдуардовна
+                        </div>
+                        <div class="specialists__descr">Аспирантура в&nbsp;РФ. Повышение квалификации в&nbsp;Германии. Специализируется на&nbsp;реставрациях и&nbsp;лечении каналов..</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev ui-swiper-button"></div>
+                <div class="swiper-button-next ui-swiper-button"></div>
+                <div class="ui-swiper-pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--ov-hidden" id="service-cost">
+          <div class="inner">
+            <h2 class="ui-h2 ui-h2--mb-section text-center">Стоимость услуг
+            </h2>
+            <div class="tabs-head">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide tabs-head__item tabs-head__item--active">Профилактика</div>
+                  <div class="swiper-slide tabs-head__item">Терапия под микроскопом</div>
+                  <div class="swiper-slide tabs-head__item">Хирургия</div>
+                  <div class="swiper-slide tabs-head__item">Ортодонтия</div>
+                  <div class="swiper-slide tabs-head__item">Имплантация</div>
+                  <div class="swiper-slide tabs-head__item">Ортопедия</div>
+                  <div class="swiper-slide tabs-head__item">Детская стоматология</div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-main">
+              <div class="tabs-main__item tabs-main__item--active">
+                <div class="price">
+                  <div class="price__item">
+                    <div class="price__name">Детская гигиена</div>
+                    <div class="price__value">2 200 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Профессиональная гигиена (для первичных пациентов)</div>
+                    <div class="price__value">3 500 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-main__item">
+                <div class="price">
+                  <div class="price__item">
+                    <div class="price__name">Временная пломба</div>
+                    <div class="price__value">700 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Лечение кариеса</div>
+                    <div class="price__value">8 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Лечение кариеса</div>
+                    <div class="price__value">8 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Микроскоп</div>
+                    <div class="price__value">2 800 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Лечение канала при пульпите </div>
+                    <div class="price__value">16 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Лечение канала зуба при периодонтите</div>
+                    <div class="price__value">19 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-main__item">
+                <div class="price">
+                  <div class="price__item">
+                    <div class="price__name">Удаление простое</div>
+                    <div class="price__value">4 100 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Удаление сложное</div>
+                    <div class="price__value">7 400 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-main__item">
+                <div class="price">
+                  <div class="price__item">
+                    <div class="price__name">Капы FlexiLigner</div>
+                    <div class="price__value">250 000₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Лингвальные Брекеты</div>
+                    <div class="price__value">150 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Брекеты</div>
+                    <div class="price__value">140 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-main__item">
+                <div class="price">
+                  <div class="price__item">
+                    <div class="price__name">Использование имплантата Osstem</div>
+                    <div class="price__value">20 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Использование имплантата Straumann</div>
+                    <div class="price__value">55 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Имплантация All-on-4</div>
+                    <div class="price__value">280 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-main__item">
+                <div class="price">
+                  <div class="price__item">
+                    <div class="price__name">Временная коронка</div>
+                    <div class="price__value">7 300 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Винир Emax</div>
+                    <div class="price__value">39 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Коронка металлокерамика</div>
+                    <div class="price__value">44 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Коронка диоксид циркония</div>
+                    <div class="price__value">65 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-main__item">
+                <div class="price">
+                  <div class="price__item">
+                    <div class="price__name">Лечение молочного зуба</div>
+                    <div class="price__value">4 600 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Лечение постоянного зуба</div>
+                    <div class="price__value">7 000 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                  <div class="price__item">
+                    <div class="price__name">Удаление молочного зуба</div>
+                    <div class="price__value">2 600 ₽</div><a class="ui-button price__ui-button" href="#">Записаться на прием</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="licensed">
+          <div class="licensed">
+            <div class="inner">
+              <h2 class="ui-h2 ui-h2--mb-section text-center">Мы являемся лицензированной стоматологией
+              </h2>
+              <div class="licensed__main">
+                <div class="licensed__slider">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="licensed__item swiper-slide"><img src="img/licensed_1.webp" alt=""/></div>
+                      <div class="licensed__item swiper-slide"><img src="img/licensed_2.webp" alt=""/></div>
+                      <div class="licensed__item swiper-slide"><img src="img/licensed_3.webp" alt=""/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev ui-swiper-button"></div>
+                  <div class="swiper-button-next ui-swiper-button"></div>
+                </div>
+                <div class="ui-swiper-pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--ov-hidden" id="rating">
+          <div class="rating">
+            <div class="inner">
+              <h2 class="ui-h2 ui-h2--mb-section text-center">Нам довряют
+              </h2>
+              <div class="rating__slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_sberhealth.svg" alt=""/></div>
+                      <div class="rating__value">4,1</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_prodoctorov.svg" alt=""/></div>
+                      <div class="rating__value">4,4</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_doctu.svg" alt=""/></div>
+                      <div class="rating__value">4,8</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_zoon.svg" alt=""/></div>
+                      <div class="rating__value">4,8</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_32top.png" alt=""/></div>
+                      <div class="rating__value">5,0</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_2gis.png" alt=""/></div>
+                      <div class="rating__value">4,9</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_krasotaimedicina.png" alt=""/></div>
+                      <div class="rating__value">5,0</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                    <div class="rating__item swiper-slide">
+                      <div class="rating__icon"><img src="img/rating_kleos.png" alt=""/></div>
+                      <div class="rating__value">5,0</div>
+                      <div class="rating__text">рейтинг</div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev ui-swiper-button"></div>
+                  <div class="swiper-button-next ui-swiper-button"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--ov-hidden" id="contacts">
+          <div class="contacts">
+            <h2 class="ui-h2 contacts__ui-h2">Контактная информация
+            </h2>
+            <div class="contacts__map" id="contactsMap"></div>
+            <div class="contacts__main">
+              <div class="contacts__wrapper">
+                <div class="contacts__item">
+                  <div class="contacts__title">Наш адрес: </div>
+                  <div class="contacts__text">г.Москва ул. Новаторов, д.4 <br>Метро Новаторская</div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__title">Часы работы: </div>
+                  <div class="contacts__text">с 9:00 до 21:00</div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__title">Телефон для связи:</div>
+                  <div class="contacts__text"><a href="tel:+74951265490">+7 (495) 126-54-90</a></div>
+                </div>
+              </div>
+              <div class="contacts__img"><img src="img/contacts_img.png" alt=""/></div><a class="ui-button contacts__ui-button" href="#">Записаться на прием</a>
+            </div>
+          </div>
+        </section>
+        <div class="popup__wrapper" style="display: none;" id="about-popup">
+          <div class="about-popup">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/about_slider_1.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_3.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_4.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_5.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_6.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_7.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_8.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_9.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_10.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_11.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_12.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_13.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_14.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_15.webp" alt=""></div>
+                <div class="swiper-slide"><img src="img/about_slider_16.webp" alt=""></div>
+              </div>
+              <div class="swiper-button-prev ui-swiper-button"></div>
+              <div class="swiper-button-next ui-swiper-button"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="inner">
+          <div class="footer__wrapper">
+            <div class="footer__policy"><a href="https://promo01.ru/" target="_blank">Политика конфиденциальности.</a></div>
+            <div class="footer__made">Разработка сайта <a href="">“Генерация”</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="libs/fancybox/fancybox.js"></script>
+    <script src="libs/swiper/swiper-bundle.js"></script>
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
