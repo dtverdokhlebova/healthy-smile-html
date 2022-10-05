@@ -76,6 +76,7 @@ function galleryPopupSwiper() {
   galleryPopupSlider = new Swiper('.about-popup .swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
+    rewind: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
@@ -106,7 +107,6 @@ function getPopup(popup, source) {
         done: (fancybox, slide) => {
           if (popupSource === '#about-popup') {
             galleryPopupSwiper()
-            // galleryPopupSlider.update()
             galleryPopupSlider.slideTo((linkIndex), 300)
           }
         }
@@ -127,6 +127,7 @@ function mapInit() {
   const mapzoom = $(window).width() > 767 ? 15 : 12
   myMap = new ymaps.Map('contactsMap', {
     center: [55.669254, 37.521758],
+    // center: [55.669254, 37.528758],
     zoom: mapzoom,
     controls: []
   }, {
@@ -144,13 +145,14 @@ function mapInit() {
 }
 
 function aboutSlider() {
-  if (document.querySelector('.about .swiper')) {
-    const slider = new Swiper('.about .swiper', {
+  if (document.querySelector('.about__slider .swiper')) {
+    const slider = new Swiper('.about__slider .swiper', {
       slidesPerView: 2,
       spaceBetween: 15,
+      rewind: true,
       navigation: {
-        nextEl: '.about .swiper-button-next',
-        prevEl: '.about .swiper-button-prev'
+        nextEl: '.about__slider .swiper-button-next',
+        prevEl: '.about__slider .swiper-button-prev'
       },
       breakpoints: {
         767: {
@@ -287,34 +289,32 @@ function specialistsSlider() {
 
 function tabs() {
   const tabsHead = '.tabs-head'
-  const tabsHeadItem = '.tabs-head__item'
-  const tabsHeadItemActive = 'tabs-head__item--active'
-  const tabsMainItem = '.tabs-main__item'
-  const tabsMainItemActive = 'tabs-main__item--active'
 
   if ($(tabsHead).length > 0) {
-    const tabsNav = document.querySelectorAll(tabsHead)
+    const tabsNav = document.querySelector(tabsHead)
 
-    for (const item of tabsNav) {
-      const headSlider = item.querySelector('.swiper')
-
-      const tabsSlider = new Swiper(headSlider, {
-        spaceBetween: 10,
-        slidesPerView: 'auto',
-        freeMode: true,
-        breakpoints: {
-          767: {
-            slidesPerView: 'auto',
-            spaceBetween: 48
-          }
+    const tabsHeadSlider = new Swiper(tabsNav.querySelector('.swiper'), {
+      spaceBetween: 15,
+      slidesPerView: 'auto',
+      freeMode: true,
+      breakpoints: {
+        767: {
+          slidesPerView: 'auto',
+          spaceBetween: 48
         }
-      })
-    }
-    $(tabsHeadItem).on('click', function (event) {
-      if ($(this).find('.tabs-head__link').length === 0 && !$(this).hasClass(tabsHeadItemActive)) {
-        $(this).siblings(tabsHeadItem).removeClass(tabsHeadItemActive)
-        $(this).addClass(tabsHeadItemActive)
-        $(this).parents(tabsHead).siblings('.tabs-main').children(tabsMainItem).fadeOut(0).eq($(this).index()).fadeIn()
+      }
+    })
+    const tabsMainSlider = new Swiper('.tabs-main .swiper', {
+      spaceBetween: 15,
+      autoHeight: true,
+      slidesPerView: 1,
+      thumbs: {
+        swiper: tabsHeadSlider
+      },
+      on: {
+        slideChange: function () {
+          tabsHeadSlider.slideTo(this.activeIndex, 300)
+        }
       }
     })
   }

@@ -728,6 +728,7 @@ a:active {
 .contacts__map {
   grid-column: 4/6;
   grid-row: span 4;
+  max-width: 980px;
 }
 @media (max-width: 767px) {
   .contacts__map {
@@ -1811,7 +1812,7 @@ a:active {
 }
 @media (max-width: 767px) {
   .services__list li:not(:last-child) {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.05em;
   }
 }
 .services__ui-button {
@@ -1958,10 +1959,10 @@ a:active {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.tabs-head__item--active {
+.tabs-head__item.swiper-slide-thumb-active {
   color: #ea9a6b;
 }
-.tabs-head__item--active::before {
+.tabs-head__item.swiper-slide-thumb-active::before {
   opacity: 1;
 }
 .tabs-head .swiper {
@@ -1974,10 +1975,4 @@ a:active {
   .tabs-main {
     padding-top: 30px;
   }
-}
-.tabs-main__item {
-  display: none;
-}
-.tabs-main__item--active {
-  display: block;
 }
