@@ -171,110 +171,118 @@ function aboutSlider() {
 }
 
 function licensedSlider() {
-  const slider = new Swiper('.licensed .swiper', {
-    slidesPerView: 1,
-    spaceBetween: 25,
-    navigation: {
-      nextEl: '.licensed .swiper-button-next',
-      prevEl: '.licensed .swiper-button-prev'
-    },
-    pagination: {
-      el: '.licensed .swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      560: {
-        slidesPerView: 2,
-        spaceBetween: 45
+  if (document.querySelector('.licensed .swiper')) {
+    const slider = new Swiper('.licensed .swiper', {
+      slidesPerView: 1,
+      spaceBetween: 25,
+      navigation: {
+        nextEl: '.licensed .swiper-button-next',
+        prevEl: '.licensed .swiper-button-prev'
       },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 45
+      pagination: {
+        el: '.licensed .swiper-pagination',
+        type: 'bullets',
+        clickable: true
       },
-      1500: {
-        slidesPerView: 3,
-        spaceBetween: 85
+      breakpoints: {
+        560: {
+          slidesPerView: 2,
+          spaceBetween: 45
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 45
+        },
+        1500: {
+          slidesPerView: 3,
+          spaceBetween: 85
+        }
       }
-    }
-  })
+    })
+  }
 }
 
 function ratingSlider() {
-  const slider = new Swiper('.rating .swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.rating .swiper-button-next',
-      prevEl: '.rating .swiper-button-prev'
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 'auto',
-        spaceBetween: 20
+  if (document.querySelector('.rating .swiper')) {
+    const slider = new Swiper('.rating .swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: '.rating .swiper-button-next',
+        prevEl: '.rating .swiper-button-prev'
       },
-      1500: {
-        slidesPerView: 4,
-        spaceBetween: 30
+      breakpoints: {
+        767: {
+          slidesPerView: 'auto',
+          spaceBetween: 20
+        },
+        1500: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
       }
-    }
-  })
+    })
+  }
 }
 
 function reviewsSlider() {
-  const slider = new Swiper('.reviews .swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.reviews .swiper-button-next',
-      prevEl: '.reviews .swiper-button-prev'
-    },
-    pagination: {
-      el: '.reviews .swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 2,
-        spaceBetween: 20
+  if (document.querySelector('.reviews .swiper')) {
+    const slider = new Swiper('.reviews .swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.reviews .swiper-button-next',
+        prevEl: '.reviews .swiper-button-prev'
       },
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 30
+      pagination: {
+        el: '.reviews .swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        }
       }
-    }
-  })
+    })
+  }
 }
 
 function specialistsSlider() {
-  const slider = new Swiper('.specialists .swiper', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.specialists .swiper-button-next',
-      prevEl: '.specialists .swiper-button-prev'
-    },
-    pagination: {
-      el: '.specialists .swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 45
+  if (document.querySelector('.specialists .swiper')) {
+    const slider = new Swiper('.specialists .swiper', {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.specialists .swiper-button-next',
+        prevEl: '.specialists .swiper-button-prev'
       },
-      1500: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 145
+      pagination: {
+        el: '.specialists .swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 45
+        },
+        1500: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 145
+        }
       }
-    }
-  })
+    })
+  }
 }
 
 function tabs() {
