@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   services()
   specialistsSlider()
   tabs()
+})
+$(window).on('load', function () {
   contacts()
 })
 
