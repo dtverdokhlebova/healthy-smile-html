@@ -5,12 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
   licensedSlider()
   ratingSlider()
   reviewsSlider()
-  services()
+  servicesEvents()
   specialistsSlider()
   tabs()
 })
 $(window).on('load', function () {
   contacts()
+  servicesAnim()
 })
 
 let galleryPopupSlider
@@ -322,7 +323,7 @@ function tabs() {
   }
 }
 
-function services() {
+function servicesEvents() {
   $('.services__more .ui-button').on('click', function () {
     const parentBlock = $(this).parents('.services')
     const parentWrapper = parentBlock.find('.services__wrapper')
@@ -336,7 +337,9 @@ function services() {
       $('html, body').animate({ scrollTop: scrollValue })
     }
   })
+}
 
+function servicesAnim() {
   if (document.querySelector('.services')) {
     const caseItems = gsap.utils.toArray('.services__item')
     caseItems.forEach((caseItem, index) => {
