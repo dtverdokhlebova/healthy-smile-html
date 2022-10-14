@@ -460,12 +460,25 @@ a:active {
 }
 .about__slider .swiper-slide {
   position: relative;
+  height: 248px;
   cursor: pointer;
 }
-.about__slider .swiper-slide::after {
-  content: "";
-  display: block;
-  padding-top: 115%;
+@media (max-width: 1499px) {
+  .about__slider .swiper-slide {
+    height: 265px;
+  }
+}
+@media (max-width: 1024px) {
+  .about__slider .swiper-slide {
+    height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .about__slider .swiper-slide::after {
+    content: "";
+    display: block;
+    padding-top: 115%;
+  }
 }
 .about__slider .swiper-slide img {
   position: absolute;
